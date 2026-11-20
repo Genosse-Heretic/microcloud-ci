@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: belisar-nginx
+    ports:
+      - "8081:80"
+    volumes:
+      - ./website:/usr/share/nginx/html:ro
+    restart: unless-stopped
